@@ -1,23 +1,27 @@
-import React from 'react';
+import React from "react";
+import ProductCard from "./components/ProductCard.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+  constructor(){
+    super();
+    this.state= {
+      product: {
+        id: 1,
+        name: "Pelota",
+        photo: "https://ep01.epimg.net/verne/imagenes/2015/09/11/articulo/1441988783_165642_1442161238_sumario_normal.jpg",
+        code: "1",
+        initialPrice: "$2",
+        sellingPrice: "$10"
+      }
+    }
+  }
+
+
+  render = () => {
+    return (
+      <>
+        <ProductCard product={this.state.product}/>
+      </>
+    )
+  };
 }
-
-export default App;
