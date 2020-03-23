@@ -1,5 +1,6 @@
 import React from "react";
 import CardContainer from "../components/CardContainer.js";
+import NavDelsat from "../components/NavDelsat.js";
 
 export default class ProductsList extends React.Component {
   constructor(){
@@ -28,6 +29,7 @@ export default class ProductsList extends React.Component {
   render = () => {
     return (
       <>
+        <NavDelsat />
         <CardContainer products={this.state.products} />
       </>
     )
