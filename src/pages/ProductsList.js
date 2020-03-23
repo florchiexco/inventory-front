@@ -1,6 +1,5 @@
 import React from "react";
 import CardContainer from "../components/CardContainer.js";
-import NavDelsat from "../components/NavDelsat.js";
 
 export default class ProductsList extends React.Component {
   constructor(){
@@ -16,7 +15,7 @@ export default class ProductsList extends React.Component {
         },
         { id: 2,
           name: "Raqueta",
-          photo: "https://ep01.epimg.net/verne/imagenes/2015/09/11/articulo/1441988783_165642_1442161238_sumario_normal.jpg",
+          photo: "https://previews.123rf.com/images/colinekot/colinekot1404/colinekot140400059/27779711-ilustraci%C3%B3n-de-una-pelota-de-tenis-y-una-raqueta.jpg",
           code: "2",
           initialPrice: "$12",
           sellingPrice: "$100"
@@ -29,7 +28,6 @@ export default class ProductsList extends React.Component {
   render = () => {
     return (
       <>
-        <NavDelsat />
         <CardContainer products={this.state.products} />
       </>
     )

@@ -12,6 +12,15 @@ export default class ProductCard extends React.Component {
       "https://stockpictures.io/wp-content/uploads/2020/01/image-not-found-big-768x432.png";
 
     const { product } = this.props;
+    let img;
+
+    if(product.photo){
+      img= product.photo;
+    }
+    else{
+      img= defaultUrl;
+    }
+
     return (
       <>
         <Row>
@@ -25,7 +34,7 @@ export default class ProductCard extends React.Component {
 
               <Card.Img
                 onerror={(product.photo = undefined)}
-                src={product.photo ? product.photo : defaultUrl}
+                src={img}
                 style={{ width: "100%" }}
                 alt={product.name}
               />
